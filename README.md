@@ -24,7 +24,13 @@ I have included the MicrosoftWebDriver.exe driver that I used in the root of thi
 
 In IntelliJ, the tests are executed from the com.rschallenge.autotests.AutoTestMain class.
 
-The feature files that serve as the input files to the tests can be found under the com.rschallenge.featurefiles namespace.
+The feature files that serve as the input files to the tests can be found under the com.rschallenge.featurefiles namespace and they describe the following scenarios:
+
+1. Guest Quick Order
+2. Guest Order From All Products Menu
+3. Guest searches for batteries
+4. Guest searches for Torches
+5. Guest searches for robot by RS Stock No
 
 I have also packaged the tests up into a JAR file if this is more convenient. This can be found in the out\artifacts\RSChallenge_jar folder.
 
