@@ -15,25 +15,32 @@ public class ProcessDeliveryPage {
         wait.until(ExpectedConditions.visibilityOf(DeliveryPage.customerTitle(driver)));
         if (DeliveryPage.deliveryTitle(driver).getText().equals("Delivery"))
         {
-            System.out.println("Delivery page title was displayed.\n");
+            System.out.println("Delivery page title was displayed.");
         }
         else
         {
-            System.out.println("Delivery page title was not displayed.\n");
-            System.out.println("Actual text found: " + DeliveryPage.deliveryTitle(driver).getText() + "\n");
+            System.out.println("Delivery page title was not displayed.");
+            System.out.println("Actual text found: " + DeliveryPage.deliveryTitle(driver).getText());
         }
-        System.out.println("Processing the Delivery page.\n");
+        System.out.println("Processing the Delivery page.");
         DeliveryPage.customerTitle(driver).sendKeys("d"+ENTER);
+        DeliveryPage.firstName(driver).clear();
         DeliveryPage.firstName(driver).sendKeys("Auto");
+        DeliveryPage.surName(driver).clear();
         DeliveryPage.surName(driver).sendKeys("Tester");
+        DeliveryPage.contactNumber(driver).clear();
         DeliveryPage.contactNumber(driver).sendKeys("0123456789");
+        DeliveryPage.deliveryAddressName(driver).clear();
         DeliveryPage.deliveryAddressName(driver).sendKeys("Auto Tester");
+        DeliveryPage.deliveryAddressLine1(driver).clear();
         DeliveryPage.deliveryAddressLine1(driver).sendKeys("1 Test Street");
+        DeliveryPage.deliveryTown(driver).clear();
         DeliveryPage.deliveryTown(driver).sendKeys("Teston");
+        DeliveryPage.deliveryPostCode(driver).clear();
         DeliveryPage.deliveryPostCode(driver).sendKeys("TE1 2ST");
         // Putting in a temporary sleep here to see what is going on.
         try {
-            Thread.sleep(10000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

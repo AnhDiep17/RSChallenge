@@ -33,4 +33,14 @@ public class HomePage {
         return element;
     }
 
+    public static WebElement allProductsMenu(WebDriver driver) {
+        element = driver.findElement(By.xpath("//a[@title='All Products']"));
+        return element;
+    }
+
+    public static WebElement batteriesMenuItem(WebDriver driver) {
+        element = driver.findElement(By.xpath("//a[text()='Batteries']"));
+        return element;
+    }
+
 }
